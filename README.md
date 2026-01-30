@@ -139,4 +139,4 @@ This project is open-source under the Apache 2.0 license.
 - [Contribution Guide](CONTRIBUTING.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [Design Patterns Used](DESIGN_PATTERNS.md)
-- [javadoc](https://kwimoad.github.io/ToDarija/docs/javadoc/)
+- [JavaDoc](https://kwimoad.github.io/ToDarija/docs/javadoc/)
