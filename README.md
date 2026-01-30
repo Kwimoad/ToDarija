@@ -22,6 +22,62 @@ ToDarija/
 └── README.md                    # This file
 ```
 
+## Backend Security Overview
+
+The backend uses a Bearer token authentication mechanism to secure all API endpoints:
+
+- Every incoming HTTP request is intercepted by an authentication filter (`AuthFilter`).
+- The filter checks for a valid `Authorization: Bearer <token>` header.
+- If the token is missing or invalid, the request is rejected with a `401 Unauthorized` response.
+- Only requests with a valid token are processed by the API controllers.
+
+**Key file:** `application/ToDarija/src/main/java/org/project/authentification/AuthFilter.java`
+
+
+## Layered Architecture & Flow
+
+```
+┌─────────────────────────────────────────────┐
+│         PRESENTATION LAYER (Frontend)       │
+│  - HTML/CSS/JS                              │
+│  - Google OAuth 2.0                         │
+│  - Fetch API for requests                   │
+└─────────────────┬───────────────────────────┘
+				  │ HTTP/REST
+┌─────────────────▼───────────────────────────┐
+│        API LAYER (REST Endpoints)           │
+│  - TranslateController                      │
+│  - JAX-RS Annotations (@Path, @POST, etc)   │
+└─────────────────┬───────────────────────────┘
+				  │
+┌─────────────────▼───────────────────────────┐
+│    BUSINESS LOGIC LAYER (Services)          │
+│  - TranslationService                       │
+│  - Orchestration & Validation               │
+│  - ProcessorFactory (Factory Pattern)       │
+└─────────────────┬───────────────────────────┘
+				  │
+┌─────────────────▼───────────────────────────┐
+│     DATA/INTEGRATION LAYER (APIs & Utils)   │
+│  - TranslateAPI (Gemini)                    │
+│  - TextAPI (Grammar Correction)             │
+│  - ClientApiKey (Singleton)                 │
+└─────────────────┬───────────────────────────┘
+				  │
+┌─────────────────▼───────────────────────────┐
+│    EXTERNAL SERVICES                        │
+│  - Google Gemini API                        │
+│  - Google OAuth 2.0                         │
+└─────────────────────────────────────────────┘
+```
+
+**Flow summary:**
+- The frontend authenticates the user (Google OAuth 2.0) and sends translation requests via Fetch API.
+- The API layer (TranslateController) receives and validates requests (secured by AuthFilter).
+- The business logic layer (TranslationService) orchestrates processing and validation.
+- The data/integration layer interacts with Gemini and utility classes for translation and correction.
+- External services (Google Gemini API, OAuth) provide AI and authentication.
+
 ## Installation & Launch
 
 
