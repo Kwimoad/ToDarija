@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traducteur Anglais - Darija</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Protection d'authentification -->
+    <script>
+        // Vérifier l'authentification avant d'afficher la page
+        const user = localStorage.getItem('user');
+        if (!user) {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h2><i class="fas fa-language"></i> Traducteur - Darija</h2>
+                <div class="user-info">
+                    <img id="user-picture" src="" alt="User" class="user-avatar">
+                    <span id="user-name"></span>
+                    <button id="logout-btn" class="logout-btn" title="Se déconnecter">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="vertical-panel">
+                <div class="section-title">
+                    Texte source
+                </div>
+                <div class="textarea-container">
+                    <textarea id="source-text" placeholder="Écrivez ou collez votre texte ici..."></textarea>
+                </div>
+                <!--<div class="recording-container">
+                    <button id="record-btn" class="btn btn-record" title="Enregistrer le son">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>-->
+            </div>
+
+            <div class="center-panel">
+                <button id="translate-btn" class="translate-button">
+                    <i class="fas fa-arrow-down"></i> Traduire
+                </button>
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Traduction en cours...</p>
+                </div>
+            </div>
+
+            <div class="vertical-panel">
+                <div class="section-title">
+                    Texte traduit (Darija)
+                </div>
+                <div class="textarea-container">
+                    <textarea id="translated-text" readonly placeholder="La traduction en darija apparaîtra ici..."></textarea>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="copy-text" class="btn">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <button id="clear-all" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

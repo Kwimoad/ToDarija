@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Traducteur Darija</title>
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fas fa-language"></i>
+                <h1>Traducteur Darija</h1>
+                <p>Connectez-vous pour accéder à l'application</p>
+            </div>
+            
+            <div class="login-content">
+                <form id="login-form" class="simple-login-form">
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Email
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i> Nom
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-sign-in-alt"></i> Se connecter
+                    </button>
+                </form>
+                
+                <div class="divider">
+                    <span>ou</span>
+                </div>
+                
+                <button id="quick-access" class="quick-btn">
+                    <i class="fas fa-bolt"></i> Accès rapide (Demo)
+                </button>
+            </div>
+            
+            <div class="login-footer">
+                <p>En vous connectant, vous acceptez nos conditions d'utilisation</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../auth-simple.js"></script>
+</body>
+</html>

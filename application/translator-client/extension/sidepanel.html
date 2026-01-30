@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translation Panel</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌐 Translator</h1>
+      <div id="userInfo" class="user-info" style="display: none;">
+        <img id="userPicture" src="" alt="User" class="user-picture">
+        <span id="userName"></span>
+        <button id="logoutBtn" class="logout-btn">Déconnexion</button>
+      </div>
+    </header>
+
+    <div class="translation-section">
+      <div class="input-group">
+        <label for="sourceText">Text to Translate:</label>
+        <textarea 
+          id="sourceText" 
+          placeholder="Enter text or click 'Get Selected Text' to translate text from the page"
+          rows="6"
+        ></textarea>
+      </div>
+
+      <div class="button-group">
+        <button id="getSelectedBtn" class="secondary-btn">Get Selected Text</button>
+      </div>
+
+      <button id="translateBtn" class="primary-btn">Translate</button>
+
+      <div id="loadingIndicator" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        Translating...
+      </div>
+
+      <div class="output-group">
+        <label for="translatedText">Translation:</label>
+        <textarea 
+          id="translatedText" 
+          placeholder="Translation will appear here..."
+          rows="6"
+          readonly
+        ></textarea>
+      </div>
+
+      <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+
+    <footer>
+      <p>Select text on any webpage and click "Get Selected Text" to translate</p>
+    </footer>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
