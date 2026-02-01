@@ -134,6 +134,11 @@ This project is open-source under the Apache 2.0 license.
 
 ---
 
+## API Documentation
+
+For detailed information on how to use the REST API, including request/response examples, authentication, and parameters, see:
+- [API Usage Guide](API_USAGE.md)
+
 ## Learn More
 
 - [Contribution Guide](CONTRIBUTING.md)

@@ -15,4 +15,21 @@
 ## Custom Exception
 - `NullPointerClient`: Fine-grained error handling for Gemini client issues.
 
+## How They Work Together
+
+```
+Request comes in
+    ↓
+Controller (MVC) receives it
+    ↓
+Factory creates the right processor (Factory Pattern)
+    ↓
+Processor uses the right strategy (Strategy Pattern)
+    ↓
+Service uses Gemini client (Singleton Pattern)
+    ↓
+Response sent back
+```
+
+
 These patterns make it easy to add new features without modifying the system core.

@@ -1,12 +1,36 @@
-# Code of Conduct for ToDarija
+# Code of Conduct
 
-We are committed to making participation in this project a harassment-free experience for everyone.
+## Be Nice
 
-## Main Rules
-- Be respectful and considerate.
-- No discriminatory or offensive language.
-- Criticism should be constructive.
+Everyone is welcome here. Be respectful, helpful, and kind.
 
-Any violation may result in exclusion from the project.
+## Rules
 
-Thank you for contributing with respect for all!
+**Do:**
+- Be kind and respectful
+- Help others learn
+- Give constructive feedback
+- Work together
+
+**Don't:**
+- Be rude or offensive
+- Harass or discriminate
+- Spam or troll
+
+## Examples
+
+ "Great start! Here's how to improve it..."  
+ "This code is terrible"
+
+## Report Issues
+
+If someone breaks these rules, contact the maintainers.
+
+## Consequences
+
+- First time: Warning
+- Repeated: Temporary or permanent ban
+
+---
+
+Let's build something great together!
