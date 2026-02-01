@@ -144,3 +144,4 @@ For detailed information on how to use the REST API, including request/response 
 - [Contribution Guide](CONTRIBUTING.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [Design Patterns Used](DESIGN_PATTERNS.md)
+- [JavaDoc](https://kwimoad.github.io/ToDarija/docs/javadoc/)
