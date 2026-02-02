@@ -126,14 +126,6 @@ Open the `translator-client/web/` folder in a browser or load the `translator-cl
 - Google Gemini API (via google-genai)
 - HTML, CSS, JavaScript (frontend)
 
-## Author
-Abdelkarim AOUAD
-
-## License
-This project is open-source under the Apache 2.0 license.
-
----
-
 ## Demo Video
 For a complete demonstration, watch our explanatory video.
 <p align="center">
@@ -153,3 +145,11 @@ For detailed information on how to use the REST API, including request/response 
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [Design Patterns Used](DESIGN_PATTERNS.md)
 - [JavaDoc](https://kwimoad.github.io/ToDarija/docs/javadoc/)
+
+## Author
+Abdelkarim AOUAD
+
+## License
+This project is open-source under the Apache 2.0 license.
+
+---
