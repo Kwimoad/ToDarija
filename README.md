@@ -129,7 +129,7 @@ Open the `translator-client/web/` folder in a browser or load the `translator-cl
 ## Demo Video
 For a complete demonstration, watch our explanatory video.
 <p align="center">
-  <a href="hhttps://drive.google.com/file/d/1JLlfkSPr_OYGSdBbFyi6zqN3dlbR3FEF/view?usp=drive_link">
+  <a href="https://drive.google.com/file/d/1dvTFEQALW_jLP-L5AGpIhYASXnDH_KmW/view?usp=drive_link">
     <img src="/docs/Carte de visite - ToDarija.gif" width="600"/>
   </a>
 </p>
