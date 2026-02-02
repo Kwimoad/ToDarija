@@ -2,7 +2,6 @@ package org.project.api;
 
 import com.google.genai.Client;
 import com.google.genai.types.GenerateContentResponse;
-import org.project.exception.NullPointerClient;
 import org.project.util.ClientApiKey;
 
 /**
